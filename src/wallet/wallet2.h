@@ -1372,8 +1372,8 @@ private:
     }
 
     BEGIN_SERIALIZE_OBJECT()
-      MAGIC_FIELD("monero wallet cache")
-      VERSION_FIELD(2)
+      MAGIC_FIELD("aimonit wallet cache")
+      VERSION_FIELD(1)
       FIELD(m_blockchain)
       FIELD(m_transfers)
       FIELD(m_account_public_address)

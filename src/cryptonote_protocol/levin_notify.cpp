@@ -569,8 +569,7 @@ namespace levin
             // connection list may be outdated, try again
             update_channels::run(zone_, get_out_connections(*zone_->p2p, core_));
           }
-
-          MERROR("Unable to send transaction(s) via Dandelion++ stem");
+                  
         }
 
         core_->on_transactions_relayed(epee::to_span(txs_), relay_method::fluff);
