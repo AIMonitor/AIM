@@ -75,17 +75,7 @@ namespace cryptonote
     LOG_PRINT_L2("destinations include " << num_stdaddresses << " standard addresses and " << num_subaddresses << " subaddresses");
   }
 
-  std::string get_governance_address(network_type nettype) {
-      if (nettype == TESTNET) {
-          return ::config::testnet::GOVERNANCE_WALLET_ADDRESS;
-      }
-      else if (nettype == STAGENET) {
-          return ::config::stagenet::GOVERNANCE_WALLET_ADDRESS;
-      }
-      else {
-          return ::config::GOVERNANCE_WALLET_ADDRESS;
-      }
-  }
+
   //---------------------------------------------------------------
   bool construct_miner_tx(size_t height, size_t median_weight, uint64_t already_generated_coins, size_t current_block_weight, uint64_t fee, const account_public_address &miner_address, transaction& tx, const blobdata& extra_nonce, size_t max_outs, uint8_t hard_fork_version) {
     tx.vin.clear();
